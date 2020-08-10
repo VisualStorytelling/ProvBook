@@ -12,17 +12,17 @@ import {
 
 
 import 'codemirror/lib/codemirror.css';
-import '@jupyterlab/codemirror/style/index.css';
+// import '@jupyterlab/codemirror/style/index.css';
 
-import '@phosphor/widgets/style/index.css';
-import '@phosphor/dragdrop/style/index.css';
+import '@lumino/widgets/style/index.css';
+import '@lumino/dragdrop/style/index.css';
 
-import '@jupyterlab/application/style/materialcolors.css';
-import '@jupyterlab/theme-light-extension/static/index.css';
-import '@jupyterlab/notebook/style/index.css';
-import '@jupyterlab/cells/style/index.css';
-import '@jupyterlab/rendermime/style/index.css';
-import '@jupyterlab/codemirror/style/index.css';
+// import '@jupyterlab/application/style/materialcolors.css';
+// import '@jupyterlab/theme-light-extension/static/index.css';
+// import '@jupyterlab/notebook/style/index.css';
+// import '@jupyterlab/cells/style/index.css';
+// import '@jupyterlab/rendermime/style/index.css';
+// import '@jupyterlab/codemirror/style/index.css';
 
 import 'nbdime/lib/common/collapsible.css';
 import 'nbdime/lib/upstreaming/flexpanel.css';

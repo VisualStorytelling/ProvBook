@@ -1,0 +1,3 @@
+[submodule "packages/jupyterlab_nbprovenance"]
+	path = packages/jupyterlab_nbprovenance
+	url = git@github.com:VisualStorytelling/jupyterlab_nbprovenance.git
