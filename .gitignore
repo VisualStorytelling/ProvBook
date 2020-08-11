@@ -12,3 +12,7 @@ MANIFEST
 **/.vscode/
 **/node_modules/
 *.tsbuildinfo
+lerna-debug.log
+package-lock.json
+provbook/webapp/static/
+yarn.lock
