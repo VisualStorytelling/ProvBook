@@ -9,8 +9,10 @@ module.exports = {
     publicPath: "./static/"
   },
   bail: true,
-  devtool: 'source-map',
+  devtool: 'eval-source-map', 
+  
   module: {
+    noParse: /node_modules/,
     rules: [
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.ipynb$/, type: 'json' },
