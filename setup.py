@@ -57,7 +57,7 @@ data_spec = [
 
 cmdclass = create_cmdclass('js', data_files_spec=data_spec)
 cmdclass['js'] = combine_commands(
-    install_npm(here, build_targets=jstargets, sources=packages_dir),
+    install_npm(here, build_targets=jstargets, sources=packages_dir, npm=['yarn']),
     ensure_targets(jstargets),
 )
 
