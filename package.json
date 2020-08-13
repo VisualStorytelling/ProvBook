@@ -1,19 +1,59 @@
 {
-  "name": "labrastory",
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "name": "@labrastory/provbook",
+  "version": "0.0.1",
+  "description": "JupyterLab Notebook Provenance",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab extension"
   ],
+  "homepage": "https://github.com/VisualStorytelling/ProvBook",
+  "license": "Apache 2.0",
+  "authors": [
+    "Netherlands eScience Center",
+    "The Caleydo Team",
+    "Sheeba Samuel"
+  ],
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VisualStorytelling/ProvBook"
+  },
   "scripts": {
-    "clean": "rimraf node_modules && lerna run clean",
-    "build": "lerna bootstrap && lerna run build",
-    "build:debug": "lerna run build:debug",
-    "updated": "lerna updated",
-    "test": "lerna run test",
-    "publish": "npm run clean && npm run build && lerna publish -m \"Publish npm packages\""
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "install-ext": "jupyter labextension install . --no-build",
+    "prepare": "yarn run clean && yarn run build",
+    "eslint": "eslint . --ext .ts,.tsx --fix",
+    "eslint:check": "eslint . --ext .ts,.tsx"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "ProvBook"
+    ]
+  },
+  "dependencies": {
+    "@jupyterlab/application": "2.2.1",
+    "jquery": "^3.5.1",
+    "moment": "^2.27.0"
   },
   "devDependencies": {
-    "lerna": "^2.0.0",
+    "tslint": "5.11.0",
+    "typescript": "^3.9.7",
     "rimraf": "^3.0.2"
+  },
+  "sideEffects": [
+    "style/*.css"
+  ],
+  "jupyterlab": {
+    "extension": true
   }
 }

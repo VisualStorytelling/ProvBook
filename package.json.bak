@@ -1,0 +1,19 @@
+{
+  "name": "labrastory",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "rimraf node_modules && lerna run clean",
+    "build": "lerna bootstrap && lerna run build",
+    "build:debug": "lerna run build:debug",
+    "updated": "lerna updated",
+    "test": "lerna run test",
+    "publish": "npm run clean && npm run build && lerna publish -m \"Publish npm packages\""
+  },
+  "devDependencies": {
+    "lerna": "^2.0.0",
+    "rimraf": "^3.0.2"
+  }
+}
